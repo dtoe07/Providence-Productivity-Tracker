@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="https://lh3.googleusercontent.com/l6JAkhvfxbP61_FWN92j4ulDMXJNH3HT1DR6xrE7MtwW-2AxpZl_WLnBzTpWhCuYkbHihgBQ=w640-h400-e365">
+<script src = "Pre-Reg.js?"></script>
+<title>Pre-Reg Helper</title>
+<style>
+        body{
+            background: #FCFCFC;
+            text-align: center;
+            font-family: 'Allura';
+            font-size: 18px;
+            margin: 0px;
+            padding: 0px;
+        }
+        button:hover{
+            background: #bababa;
+        }
+        .header{
+            background: #3f3f3f;
+            text-align: center;
+            color: #FFFFFF;
+            font-family:  'Allura';
+            font-size: 26px;
+            font-weight: bold;
+            padding: 0px;
+            margin:0px;
+        }
+		.result {
+    			padding: 0;
+    			max-height: 7.5em;
+    			overflow-y: auto;
+		}
+		.result li {
+    			font-size: 1em;
+    			padding: .25em 1em;
+    			line-height: 1em;
+		}
+		.result li:hover {
+    			background: #f1f1f1;
+		}
+</style>
+</head>
+    
+<body>
+    
+<div class="header">
+<h1 style="margin: 0px">Registrar Helper</h1>
+<p style="padding-bottom: 10px;font-size: 18px;color: #2b2b2b;">
+Copyright Ⓒ 2018 Dinh Nguyen
+</p>
+</div>
+    
+<!-----------------------------calling Buttons field----------------------------------->    
+<div style="float: left; width: 35%;margin-left:2%; margin-right:1%;">
+    <button onclick='onClick("outCall")' style="width: 70%; font-size : 30px; float: left;margin-bottom: 20px;margin-top: 0px;margin-right: 10%;">251<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Complete Pre-Reg, Contact Required</span></button>
+    <a id="outCall" style="float:left;font-size : 50px;">0</a>
+
+    
+     <button onclick='onClick("attempt")' style="width: 70%;font-size : 30px; float: left;margin-bottom: 20px;;margin-top: 0px;margin-right: 10%;">248<br/>
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Patient Contact Attempt</span></button>
+    <a id="attempt" style="float:left;font-size : 50px">0</a>
+    
+    <button onclick='onClick("research")' style="width: 70%;font-size : 30px; float: left;margin-bottom: 20px;;margin-top: 0px;margin-right: 10%;">236<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Conducted, Research In Epic</span></button>
+    <a id="research" style="float:left;font-size : 50px">0</a>
+
+    <button onclick='onClick("ptPaid")' style="width: 70%;font-size : 30px; float: left;margin-bottom: 20px;;margin-top: 0px;margin-right: 10%;">934<br/>
+    <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Provided Estimate – Paid Full</span></button>
+    <a id="ptPaid" style="float:left;font-size : 50px">0</a>
+    
+    <button onclick='onClick("ptPartial")' style="width: 70%;font-size : 30px; float: left;margin-bottom: 20px;margin-top: 0px;margin-right: 10%;">936<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Provided Estimate – Partial Payment</span></button>
+    <a id="ptPartial" style="float:left;font-size : 50px">0</a>
+    
+</div>
+
+<!-----------------------------Total calls field----------------------------------->
+<div style=" background: #e0e0e0; width: 20%;float: right; margin-right: 2%; outline: 5px solid black;">
+	<a style="font-size : 2em;">Total Productive Time</a>
+	<br>
+	<a id="total" style="font-size : 6em;color: #006400;">0</a>
+</div>
+
+<!----------------------------- HARing Buttons----------------------------------->    
+<div style="float: left;margin-left: 2%; width: 35%;">
+    <button onclick='onClick("outHar")' style="width: 70%; font-size : 30px; float: left;margin-bottom: 20px;margin-top: 0px;margin-right: 10%;">250<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Complete Pre-Reg, No Contact Required</span></button>
+    <a id="outHar" style="float:left;font-size : 50px;">0</a>
+    
+     <button onclick='onClick("makeHar")' style="width: 70%;font-size : 30px; float: left; margin-bottom: 20px;;margin-top: 0px;margin-right: 10%;">452<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">HAR Created</span></button>
+    <a id="makeHar" style="float:left;font-size : 50px">0</a>
+    
+    <button onclick='onClick("deptCall")' style="width: 70%;font-size : 30px; float: left;margin-bottom: 20px;;margin-top: 0px;margin-right: 10%;">238<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Contact Physician/Department</span></button>
+    <a id="deptCall" style="float:left;font-size : 50px">0</a>
+
+    <button onclick='onClick("payOnsite")' style="width: 70%;font-size : 30px; float: left;margin-bottom: 20px;margin-top: 0px;margin-right: 10%;">935<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Provided Estimate – Collect Onsite</span></button>
+    <a id="payOnsite" style="float:left;font-size : 50px">0</a>
+    
+    <button onclick='onClick("toBeBilled")' style="width: 70%;font-size : 30px; float: left;margin-bottom: 20px;margin-top: 0px;margin-right: 10%;">974<br/> 
+     <span style="font-size:16px;margin-top:0px;margin-bottom:0px;">Provided Estimate – Request to be Billed</span></button>
+    <a id="toBeBilled" style="float:left;font-size : 50px">0</a>
+
+</div>
+
+<!-----------------------------Search field----------------------------------->
+<div style="float: left;margin-left: 2%;margin-top: 2%">
+<a style="font-size : 30px; float: left; margin-left: 0px;">CAS Wiki Search: language codes, dept#...</a>
+<br>
+<br>
+<input id = "lang" oninput="realTimeSearch()" type="search" placeholder="Search..." style="font-size: 30px; float: left; margin-left:0px; margin-bottom: 0px; padding: 0px"/>
+
+<ul class="result" style="float: left; margin-left:30px; margin-top: 0px; text-align: left; font-size: 30px;">
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+</div>  
+
+</body>
+</html>
